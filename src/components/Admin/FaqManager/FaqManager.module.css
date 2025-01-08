@@ -1,0 +1,176 @@
+.faqManager {
+  padding: 1rem;
+}
+
+.faqManager h2 {
+  margin-bottom: 2rem;
+  color: var(--text-light);
+}
+
+.faqForm {
+  background-color: #242424;
+  padding: 2rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+}
+
+.formGroup {
+  margin-bottom: 1.5rem;
+}
+
+.formGroup label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: var(--text-light);
+}
+
+.formGroup input,
+.formGroup textarea {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  background-color: #191919;
+  color: var(--text-light);
+  font-size: 1rem;
+  transition: border-color 0.2s;
+}
+
+.formGroup input:focus,
+.formGroup textarea:focus {
+  outline: none;
+  border-color: var(--primary-color);
+}
+
+.formActions {
+  display: flex;
+  gap: 1rem;
+}
+
+.formActions button {
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 4px;
+  background-color: var(--primary-color);
+  color: var(--text-light);
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.formActions button:hover {
+  background-color: #ff5d6a;
+}
+
+.cancelButton {
+  background-color: transparent !important;
+  border: 1px solid var(--primary-color) !important;
+}
+
+.cancelButton:hover {
+  background-color: rgba(255, 70, 85, 0.1) !important;
+}
+
+.faqList {
+  display: grid;
+  gap: 1rem;
+}
+
+.faqItem {
+  background-color: #242424;
+  border-radius: 8px;
+  display: flex;
+  align-items: stretch;
+  cursor: move;
+}
+
+.dragHandle {
+  padding: 1.5rem 1rem;
+  color: var(--text-gray);
+  display: flex;
+  align-items: center;
+  cursor: move;
+  font-size: 1.2rem;
+  user-select: none;
+}
+
+.faqContent {
+  flex: 1;
+  padding: 1.5rem 1.5rem 1.5rem 0;
+}
+
+.faqItem h3 {
+  color: var(--text-light);
+  margin-bottom: 0.5rem;
+}
+
+.faqItem p {
+  color: var(--text-gray);
+  margin-bottom: 1rem;
+}
+
+.faqActions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.faqActions button {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  background-color: #191919;
+  color: var(--text-light);
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.faqActions button:hover {
+  background-color: #2f2f2f;
+}
+
+.deleteButton {
+  background-color: var(--primary-color) !important;
+}
+
+.deleteButton:hover {
+  background-color: #ff5d6a !important;
+}
+
+/* Notification Styles */
+.notification {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: #242424;
+  color: var(--text-light);
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  animation: slideIn 0.3s ease-out;
+  z-index: 1000;
+}
+
+.notification.fadeOut {
+  animation: fadeOut 0.3s ease-out forwards;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}

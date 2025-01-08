@@ -1,0 +1,146 @@
+.checkoutContainer {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  padding-top: 0;
+}
+
+.title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: var(--text-light);
+}
+
+.subtitle {
+  text-align: center;
+  color: var(--text-gray);
+  margin-bottom: 2rem;
+  line-height: 1.6;
+      font-size: 12px;
+}
+
+.orderDetails {
+  background-color: #242424;
+  border-radius: 12px;
+  padding: 2rem;
+}
+
+.statusIndicator {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  justify-content: center;
+  color: var(--text-light);
+  font-size: 1.2rem;
+}
+
+.spinner {
+  width: 24px;
+  height: 24px;
+  border: 3px solid transparent;
+  border-top-color: var(--text-light);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.detailsGrid {
+  display: grid;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.detailItem {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  /* padding: 1rem; */
+  /* background-color: #191919; */
+  border-radius: 8px;
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+}
+
+.label {
+  display: block;
+  color: var(--text-gray);
+  font-size: 0.9rem;
+  margin-bottom: 0.25rem;
+}
+
+.value {
+  color: var(--text-light);
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.paymentButton {
+  width: 100%;
+  padding: 1rem;
+  background-color: var(--primary-color);
+  color: var(--text-light);
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  transition: background-color 0.2s;
+}
+
+.paymentButton:hover {
+  background-color: #ff5d6a;
+}
+
+.arrowIcon {
+  width: 20px;
+  height: 20px;
+}
+
+.cancelButton {
+  width: 100%;
+  padding: 1rem;
+  background-color: transparent;
+  border: 1px solid var(--primary-color);
+  color: var(--text-light);
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  transition: background-color 0.2s;
+}
+
+.cancelButton:hover {
+  background-color: rgba(255, 70, 85, 0.1);
+}
+
+@media (max-width: 480px) {
+  .checkoutContainer {
+    padding: 1rem;
+  }
+  
+  .title {
+    font-size: 2rem;
+  }
+  
+  .orderDetails {
+    padding: 1rem;
+  }
+}

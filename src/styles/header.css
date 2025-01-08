@@ -1,0 +1,100 @@
+/* Header Styles */
+@import './variables.css';
+
+header {
+  padding: 1.22rem 2rem;
+  background-color: #242424;
+  box-shadow: 4px 0 12px rgb(0 0 0 / 10%);
+  position: sticky;
+  top: 0;
+}
+
+nav {
+  max-width: 1050px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: var(--text-light);
+  position: relative;
+}
+
+.logo:after {
+  content: "";
+  position: absolute;
+  background-color: #0000001a;
+  width: 2px;
+  height: 65px;
+  top: -11px;
+  right: -37px;
+}
+
+.logo-img {
+  height: 43px;
+  width: auto;
+}
+
+.desktop-menu {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+}
+
+.desktop-menu li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+nav a {
+  color: var(--text-light);
+  text-decoration: none;
+  transition: opacity 0.2s;
+  font-size: 15px;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: #ff3d55;
+}
+
+/* Hamburger Button */
+.hamburger-button {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.hamburger-button span {
+  width: 100%;
+  height: 2px;
+  background-color: var(--text-light);
+  transition: all 0.3s ease;
+}
+
+@media (max-width: 1085px) {
+  .desktop-menu {
+    display: none;
+  }
+
+  .hamburger-button {
+    display: flex;
+  }
+}

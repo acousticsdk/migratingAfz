@@ -1,0 +1,125 @@
+/* Form Styles */
+@import './variables.css';
+
+/* Form Groups */
+.form-group {
+  margin-bottom: 1.5em;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+}
+
+/* Input Groups */
+.input-group {
+  display: flex;
+  background-color: #191919;
+  align-items: center;
+  border-radius: 10px;
+  padding: 0.8rem 1rem;
+  margin-top: 0.5rem;
+  border: 1px solid transparent;
+  transition: border-color 0.2s ease;
+  cursor: text;
+}
+
+.input-group:focus-within {
+  border-color: var(--primary-color);
+}
+
+.input-group.error {
+  border-color: var(--primary-color);
+  animation: shake 0.4s ease-in-out;
+}
+
+/* Input Fields */
+input[type="text"],
+input[type="email"] {
+  width: 100%;
+  background: none;
+  border: none;
+  color: var(--text-light);
+  font-size: 1.1rem;
+  font-weight: 500;
+  padding: 0;
+  outline: none;
+  cursor: text;
+  flex: initial;
+}
+
+/* Checkboxes */
+input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  border-radius: 4px;
+  border: 1px solid var(--text-gray);
+  appearance: none;
+  cursor: pointer;
+  position: relative;
+  transition: background-color 0.2s, border-color 0.2s;
+}
+
+input[type="checkbox"]:checked {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+input[type="checkbox"]:checked::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 12px;
+  height: 10px;
+  background-image: url("/assets/check.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+}
+
+/* Help Button */
+.btn-help {
+  background-color: #242424;
+  color: #9C9A9A;
+  border: none;
+  padding: 5px 12px 3px;
+  border-radius: 10px;
+  font-size: 14px;
+  margin-left: auto;
+  min-width: 135px;
+  cursor: pointer;
+}
+
+.btn-help:hover {
+  opacity: 0.9;
+}
+
+/* Labels */
+.optional-label {
+  color: var(--text-gray);
+  font-size: 0.9rem;
+  margin-left: 0.5rem;
+}
+
+/* Warning Messages */
+.warning-message {
+  color: var(--primary-color);
+  font-size: 0.9rem;
+  padding: 0.5rem 0;
+  animation: fadeIn 0.3s ease-out;
+}
+
+/* Animations */
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  75% { transform: translateX(5px); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-5px); }
+  to { opacity: 1; transform: translateY(0); }
+}

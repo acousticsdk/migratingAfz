@@ -1,0 +1,79 @@
+/* Hero Section Styles */
+@import './variables.css';
+
+.hero {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.hero h1 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.hero-description {
+  color: var(--text-gray);
+  font-size: 1.1rem;
+  margin-bottom: 1.3rem;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 1.3rem;
+}
+
+.btn-faq, .btn-new-account {
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  transition: all 0.2s;
+  background-color: transparent;
+  border: 1px solid var(--primary-color);
+  color: var(--text-light);
+}
+
+.btn-faq:hover, .btn-new-account:hover {
+  background-color: rgba(255, 70, 85, 0.1);
+}
+
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 1.4rem;
+    margin-top: 20px;
+  }
+
+  .hero-description {
+    font-size: 0.9rem;
+  }
+
+  .action-buttons {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0 1rem;
+  }
+
+  .btn-faq, .btn-new-account {
+    flex: 1;
+    min-width: 120px;
+    max-width: calc(50% - 0.25rem);
+    font-size: 0.9rem;
+    padding: 0.5rem 0.8rem;
+    border: none;
+    background-color: #242424;
+    justify-content: center;
+  }
+
+  .btn-faq .btn-icon, 
+  .btn-new-account .btn-icon {
+    display: none;
+  }
+}

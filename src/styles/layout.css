@@ -1,0 +1,43 @@
+/* Layout Styles */
+@import './variables.css';
+
+main {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 1.5rem 2rem;
+  min-height:800px;
+}
+
+@media (max-width: 480px) {
+  main {
+    padding: 1rem 0.5rem;
+  }
+  .payment-form {
+   
+    padding: 1rem !important;
+     
+  }
+  .currency-buttons button {
+    padding: 0.5rem 0.6rem !important;
+    
+  }
+
+  .action-buttons {
+    padding: 1rem;
+    gap: 1rem;
+  }
+   .hidden-br {
+    display:none
+  } 
+  .telegram-link {
+        margin-left: 0px !important;
+
+  }
+  .footer-content .logo {
+        margin-top: 12px;
+  }
+
+  
+}
+  
+

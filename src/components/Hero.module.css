@@ -1,0 +1,68 @@
+.countriesHint {
+  cursor: help;
+  position: relative;
+  display: inline-block;
+}
+
+.countriesHint::after {
+     content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0px;
+    width: 100%;
+    height: 1px;
+    border-bottom: 1px solid var(--text-gray);
+}
+
+.tooltip {
+  visibility: hidden;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: calc(100% + 10px);
+  background: #343434;
+  color: var(--text-light);
+  padding: 1rem;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  width: fit-content;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  transition: opacity 0.2s, visibility 0.2s;
+  z-index: 100;
+      padding-top: 5px !important;
+    padding-bottom: 15px;
+}
+
+.tooltip::after {
+  content: '';
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 8px solid transparent;
+  border-bottom-color: #343434;
+}
+
+.tooltip ul {
+  list-style: none;
+  padding: 0;
+  margin: 0.5rem 0 0;
+}
+
+.tooltip ul li {
+  padding: 0.25rem 0;
+}
+
+.countriesHint:hover .tooltip {
+  visibility: visible;
+  opacity: 1;
+}
+
+@media (max-width: 768px) {
+  .tooltip {
+    width: fit-content;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
